@@ -1,19 +1,19 @@
 
 %1.1
-fileID = fopen('DN1\naloga1_1.txt', 'r');
-name = fgetl(fileID); 
-formatInfo = fgetl(fileID); 
+dat = fopen('DN1\naloga1_1.txt', 'r');
+name = fgetl(dat); 
+formatInfo = fgetl(dat); 
 numRows = 100; 
-t = fscanf(fileID, '%f', [1, numRows]);
-fclose(fileID);
+t = fscanf(dat, '%f', [1, numRows]);
+fclose(dat);
 
 %1.2
-fid = fopen('DN1\naloga1_2.txt');
-line = fgetl(fid);
+dat2 = fopen('DN1\naloga1_2.txt');
+line = fgetl(fdat2);
 
 count = 1;
-while ~feof(fid)
-    line = fgetl(fid);
+while ~feof(dat2)
+    line = fgetl(dat2);
     P(count) = str2double(line);
 
     count = count+1;
